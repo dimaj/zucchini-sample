@@ -23,7 +23,6 @@
 			<systemPath>${basedir}/lib/zucchini-1.0.1.jar</systemPath>
 		</dependency>
 
-		<!-- WHY?!?!?! -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
