@@ -28,7 +28,7 @@
 			<version>2.46.0</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.github.Comcast</groupId>
 			<artifactId>zucchini</artifactId>
@@ -47,18 +47,8 @@
 			<version>2.46.0</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
-	<profiles>
-	<profile>
-	<id>platform-mac</id>
-	<activation>
-	<os>
-	<family>mac</family>
-	</os>
-	</activation>
-	</profile>
-	</profiles>
+	</dependencies>
 
 	<build>
 		<pluginManagement>
@@ -68,6 +58,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<configuration>
 						<systemProperties>
+							<!-- If you are running on anything other than OSX, you'll need to download
+									ChromeDriver to the lib folder and change value of webdriver.chrome.driver
+									to point to newly downloaded chromedriver. You can download the
+									driver from here: https://sites.google.com/a/chromium.org/chromedriver/downloads 
+							 -->
 							<webdriver.chrome.driver>${basedir}/lib/chromedriver</webdriver.chrome.driver>
 						</systemProperties>
 					</configuration>
